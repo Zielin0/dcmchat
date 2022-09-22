@@ -48,7 +48,7 @@ You need a 1.19.2 [papermc server](https://papermc.io/downloads).
 
 When the server is installed place the freshly downloaded plugin in the `/plugins` folder.
 
-Start a server to generate needed files (Don't worry about errors ** for now**).
+Start a server to generate needed files (Don't worry about errors **for now**).
 
 ## Configuring
 
