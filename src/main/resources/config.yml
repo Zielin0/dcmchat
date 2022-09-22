@@ -1,0 +1,4 @@
+server-name: "server"
+channel-name: "mc-chat"
+enable-tag: false
+enable-console: false

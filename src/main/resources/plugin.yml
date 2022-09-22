@@ -1,0 +1,16 @@
+name: Dcmchat
+version: '${project.version}'
+main: tk.siurasowo.dcmchat.Dcmchat
+api-version: 1.19
+authors: [ Zielino ]
+description: Discord-Minecraft Chat Integration
+website: https://siurasowo.tk
+
+commands:
+  status:
+    description: "Displays the discord server stats"
+    usage: "/status"
+
+  config:
+    description: "Changes the configuration of the plugin"
+    usage: "/config [enable-tag|enable-console|channel] <value>"
