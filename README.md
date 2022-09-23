@@ -75,8 +75,8 @@ You need a discord bot for this.
 
 7. Lastly add a line to `config.yml` saying:
 
-    ```xml
-    BOT_TOKEN=YOUR_BOT_TOKEN
+    ```yaml
+    BOT_TOKEN: YOUR_BOT_TOKEN
     ```
 
 Replace the "YOUR_BOT_TOKEN" with the actual token.
