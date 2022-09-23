@@ -104,7 +104,7 @@ Replace the "YOUR_BOT_TOKEN" with the actual token.
 
 4. Run maven scripts first `clean` then `package`.
 
-5. Plugin should appear in the `/target` directory.
+5. Plugin should appear in the `/target` directory (only if you skipped `outputDirectory` configuration).
 
 ## Warnings
 
