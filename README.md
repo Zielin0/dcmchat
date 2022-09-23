@@ -46,7 +46,7 @@ Download this plugin from [Releases](https://github.com/Zielin0/Dcmchat/releases
 
 You need a 1.19.2 [papermc server](https://papermc.io/downloads).
 
-When the server is installed place the freshly downloaded plugin in the `/plugins` folder.
+When the server is installed place the freshly downloaded plugin in the `plugins/` folder.
 
 Start a server to generate needed files (Don't worry about errors **for now**).
 
@@ -60,7 +60,7 @@ You need a discord bot for this.
 
 2. Copy the bot token to your clipboard.
 
-3. Go to `/plugins/Dcmchat` and open the `config.yml` file with a text editor.
+3. Go to `plugins/Dcmchat/` and open the `config.yml` file with a text editor.
 
 4. Replace `"server"` with your server name (the server with the bot).
 
@@ -104,7 +104,7 @@ Replace the "YOUR_BOT_TOKEN" with the actual token.
 
 4. Run maven scripts first `clean` then `package`.
 
-5. Plugin should appear in the `/target` directory (only if you skipped `outputDirectory` configuration).
+5. Plugin should appear in the `target/` directory (only if you skipped `outputDirectory` configuration).
 
 ## Warnings
 
