@@ -67,7 +67,7 @@ You need a discord bot for this.
 5. You need to set the channel.
 
    There are two options:
-   - Create a text channel with an "mc-chat" name.
+   - Create a text channel with a "mc-chat" name.
    - Change the "mc-chat" to your channel name.
 
 6. If you want the plugin to display discord messages in the console or show the discord user's tag
