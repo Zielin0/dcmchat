@@ -19,6 +19,10 @@ import tk.siurasowo.dcmchat.utils.Hex;
 import java.awt.*;
 import java.util.List;
 
+import static tk.siurasowo.dcmchat.utils.Colorize.Colors.BLUE;
+import static tk.siurasowo.dcmchat.utils.Colorize.Colors.CYAN;
+import static tk.siurasowo.dcmchat.utils.Colorize.Colors.RED;
+
 public class DiscordEventListener extends ListenerAdapter {
 
     private final Dcmchat plugin;
@@ -34,7 +38,7 @@ public class DiscordEventListener extends ListenerAdapter {
 
         if (guilds.isEmpty()) {
             plugin.logger.info(Colorize.colorConsole("The bot hasn't been added to your server. " +
-                    "The bot will only work on the server you've setup in the config.yml file.", Colorize.Colors.RED));
+                    "The bot will only work on the server you've setup in the config.yml file.", RED));
         } else {
             plugin.setGuild(guilds.get(0));
         }
@@ -128,8 +132,8 @@ public class DiscordEventListener extends ListenerAdapter {
                     p.sendMessage(msg);
 
                     if (plugin.getIsConsoleEnabled()) {
-                        plugin.logger.info(Colorize.colorConsole("[Discord] ", Colorize.Colors.BLUE)
-                                + Colorize.colorConsole(isWithTag, Colorize.Colors.CYAN)
+                        plugin.logger.info(Colorize.colorConsole("[Discord] ", BLUE)
+                                + Colorize.colorConsole(isWithTag, CYAN)
                                 + Colorize.colorConsole(" " + message, Colorize.Colors.RESET)
                         );
                     }

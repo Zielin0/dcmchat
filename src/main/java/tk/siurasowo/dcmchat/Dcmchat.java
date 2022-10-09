@@ -21,6 +21,9 @@ import tk.siurasowo.dcmchat.utils.Colorize;
 import java.util.*;
 import java.util.logging.Logger;
 
+import static tk.siurasowo.dcmchat.utils.Colorize.Colors.RED;
+import static tk.siurasowo.dcmchat.utils.Colorize.Colors.GREEN;
+
 public final class Dcmchat extends JavaPlugin {
     public Logger logger = this.getLogger();
     public final String PLUGIN_NAME = this.getDescription().getName();
@@ -43,14 +46,14 @@ public final class Dcmchat extends JavaPlugin {
     @SneakyThrows
     @Override
     public void onEnable() {
-        logger.info(Colorize.colorConsole(PLUGIN_NAME + " enabled!", Colorize.Colors.GREEN));
+        logger.info(Colorize.colorConsole(PLUGIN_NAME + " enabled!", GREEN));
 
         this.saveDefaultConfig();
         saveResource("advancements.json", true);
 
         String token = getConfig().getString("BOT_TOKEN");
         if (token == null) {
-            logger.info(Colorize.colorConsole("Please provide a BOT_TOKEN in the config.yml file.", Colorize.Colors.RED));
+            logger.info(Colorize.colorConsole("Please provide a BOT_TOKEN in the config.yml file.", RED));
             getServer().getPluginManager().disablePlugin(this);
         }
 
@@ -71,7 +74,7 @@ public final class Dcmchat extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        logger.info(Colorize.colorConsole(PLUGIN_NAME + " disabled!", Colorize.Colors.RED));
+        logger.info(Colorize.colorConsole(PLUGIN_NAME + " disabled!", RED));
 
         if (this.bot != null)
             this.bot.shutdown();
