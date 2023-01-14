@@ -41,7 +41,7 @@ The project was done purely for learning and fun purposes. Do not take this plug
 - Displays discord messages on Minecraft chat
 - Commands
    - Status of discord server on minecraft chat 
-   - Configure options of plugin from minecraft chat
+   - Configure options of the plugin from minecraft chat
 
 ## Commands
 
