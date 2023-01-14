@@ -37,7 +37,7 @@ public class Colorize {
         ADVANCEMENT(0xffff00),
         CHALLENGE(0x800080),
         DEATH(0x000000),
-        DEFAULT(0X212121);
+        DEFAULT(0x2f3136);
 
         public final int color;
         private EmbedColors(int color) { this.color = color; }
