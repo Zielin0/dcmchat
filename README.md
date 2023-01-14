@@ -13,15 +13,14 @@
 1. [General Info](#general-info)
 2. [Features](#features)
 3. [Commands](#commands)
-4. [Downloading](#downloading)
-5. [Installation](#installation)
-6. [Configuring](#configuring)
-7. [Building from source](#building-from-source)
-8. [Warnings](#warnings)
-9. [Dependencies and Credits](#dependencies-and-credits)
-10. [Contributing](#contributing)
-11. [License](#license)
-12. [Others](#others)
+4. [Installation](#installation)
+5. [Configuring](#configuring)
+6. [Building from source](#building-from-source)
+7. [Warnings](#warnings)
+8. [Dependencies and Credits](#dependencies-and-credits)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Others](#others)
 
 ## General Info
 The plugin's purpose is to connect the discord text channel with Minecraft chat.
@@ -49,10 +48,6 @@ The project was done purely for learning and fun purposes. Do not take this plug
 |--------------|---------------------------------------------------------|-------------------------|
 | Status       | /status                                                 | /status                 |
 | Config       | /config [enable-tag \ enable-console \ channel] <value> | /config enable-tag true |
-
-## Downloading
-
-Download this plugin from [Releases](https://github.com/Zielin0/Dcmchat/releases).
 
 ## Installation
 
