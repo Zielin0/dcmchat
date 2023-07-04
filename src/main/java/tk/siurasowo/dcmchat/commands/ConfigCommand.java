@@ -1,7 +1,7 @@
 package tk.siurasowo.dcmchat.commands;
 
 import lombok.SneakyThrows;
-import net.dv8tion.jda.api.entities.Channel;
+import net.dv8tion.jda.api.entities.channel.Channel;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
