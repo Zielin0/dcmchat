@@ -22,6 +22,7 @@ import java.util.List;
 public class DiscordEventListener extends ListenerAdapter {
 
     private final Dcmchat plugin;
+
     public DiscordEventListener(Dcmchat dcmchat) {
         this.plugin = dcmchat;
     }
@@ -101,8 +102,8 @@ public class DiscordEventListener extends ListenerAdapter {
                         String name = plugin.getGuild().getMemberById(id).getUser().getName();
                         message = message.replace("<@" + id + ">",
                                 Hex.format(Colorize.MENTION_HEX) + "@"
-                                + (nickname == null ? name : nickname)
-                                + RESET);
+                                        + (nickname == null ? name : nickname)
+                                        + RESET);
                     }
 
                     if (s.equals("@here")) {
@@ -117,8 +118,10 @@ public class DiscordEventListener extends ListenerAdapter {
                     }
                 }
 
-                String isWithTag = (plugin.getIsTagEnabled() ? event.getAuthor().getAsTag() :
-                        (plugin.getGuild().getMemberById(event.getAuthor().getId()).getNickname() == null ? event.getAuthor().getName() :
+                String discriminator = event.getAuthor().getDiscriminator();
+                String authorName = event.getAuthor().getGlobalName();
+                String isWithTag = (plugin.getIsTagEnabled() ? (discriminator.equals("0000") ? authorName + "#0" : authorName + "#" + discriminator) :
+                        (plugin.getGuild().getMemberById(event.getAuthor().getId()).getNickname() == null ? authorName :
                                 plugin.getGuild().getMemberById(event.getAuthor().getId()).getNickname()));
 
                 String colorHex = String.format("#%02x%02x%02x", colorRed, colorGreen, colorBlue);
