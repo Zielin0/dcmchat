@@ -2,6 +2,7 @@ package xyz.zielinus.dcmchat.listeners;
 
 import com.vdurmont.emoji.EmojiParser;
 import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
@@ -66,25 +67,7 @@ public class DiscordEventListener extends ListenerAdapter {
             if (!validMessage) {
                 channel.addReactionById(event.getMessageId(), Emoji.fromUnicode("U+2757")).queue();
             } else {
-                int colorRed;
-                int colorGreen;
-                int colorBlue;
-                if (event.getGuild().getMember(event.getAuthor()).getRoles().size() == 0) {
-                    colorRed = 153;
-                    colorGreen = 170;
-                    colorBlue = 181;
-                } else {
-                    Color roleColor = event.getGuild().getMember(event.getAuthor()).getRoles().get(0).getColor();
-                    if (roleColor == null) {
-                        colorRed = 153;
-                        colorGreen = 170;
-                        colorBlue = 181;
-                    } else {
-                        colorRed = roleColor.getRed();
-                        colorGreen = roleColor.getGreen();
-                        colorBlue = roleColor.getBlue();
-                    }
-                }
+                Color roleColor = getRoleColor(event.getAuthor(), event);
 
                 List<String> emojis = EmojiParser.extractEmojis(message);
 
@@ -100,8 +83,12 @@ public class DiscordEventListener extends ListenerAdapter {
                         id = s.replace("<", "").replace("@", "").replace(">", "");
                         String nickname = plugin.getGuild().getMemberById(id).getNickname();
                         String name = plugin.getGuild().getMemberById(id).getUser().getGlobalName();
+
+                        Color mentionColor = getRoleColor(plugin.getGuild().getMemberById(id).getUser(), event);
+                        String mentionHex = String.format("#%02x%02x%02x", mentionColor.getRed(), mentionColor.getGreen(), mentionColor.getBlue());
+
                         message = message.replace("<@" + id + ">",
-                                Hex.format(Colorize.MENTION_HEX) + "@"
+                                Hex.format(mentionHex) + "@"
                                         + (nickname == null ? name : nickname)
                                         + RESET);
                     }
@@ -124,7 +111,7 @@ public class DiscordEventListener extends ListenerAdapter {
                         (plugin.getGuild().getMemberById(event.getAuthor().getId()).getNickname() == null ? authorName :
                                 plugin.getGuild().getMemberById(event.getAuthor().getId()).getNickname()));
 
-                String colorHex = String.format("#%02x%02x%02x", colorRed, colorGreen, colorBlue);
+                String colorHex = String.format("#%02x%02x%02x", roleColor.getRed(), roleColor.getGreen(), roleColor.getBlue());
                 String msg = ChatUtils.msgDiscordPrefix(Hex.format(colorHex) + isWithTag, message);
 
                 for (Player p : plugin.getServer().getOnlinePlayers()) {
@@ -140,5 +127,20 @@ public class DiscordEventListener extends ListenerAdapter {
             }
         }
 
+    }
+
+    Color getRoleColor(User user, @NotNull MessageReceivedEvent event) {
+        Color color;
+        if (event.getGuild().getMember(user).getRoles().size() == 0) {
+            color = new Color(153, 170, 181);
+        } else {
+            Color roleColor = event.getGuild().getMember(user).getRoles().get(0).getColor();
+            if (roleColor == null) {
+                color = new Color(153, 170, 181);
+            } else {
+                return roleColor;
+            }
+        }
+        return color;
     }
 }
