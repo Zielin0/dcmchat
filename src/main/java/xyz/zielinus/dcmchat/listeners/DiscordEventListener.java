@@ -99,7 +99,7 @@ public class DiscordEventListener extends ListenerAdapter {
                     if (s.matches("^<@!?(\\d+)>$")) {
                         id = s.replace("<", "").replace("@", "").replace(">", "");
                         String nickname = plugin.getGuild().getMemberById(id).getNickname();
-                        String name = plugin.getGuild().getMemberById(id).getUser().getName();
+                        String name = plugin.getGuild().getMemberById(id).getUser().getGlobalName();
                         message = message.replace("<@" + id + ">",
                                 Hex.format(Colorize.MENTION_HEX) + "@"
                                         + (nickname == null ? name : nickname)
