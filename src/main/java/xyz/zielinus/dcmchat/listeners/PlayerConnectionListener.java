@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.listeners;
+package xyz.zielinus.dcmchat.listeners;
 
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import org.bukkit.event.EventHandler;
@@ -6,12 +6,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.jetbrains.annotations.NotNull;
-import tk.siurasowo.dcmchat.Dcmchat;
-import tk.siurasowo.dcmchat.utils.EmbedUtil;
-import tk.siurasowo.dcmchat.utils.PlayerUtil;
-
-import static tk.siurasowo.dcmchat.utils.Colorize.EmbedColors.JOIN;
-import static tk.siurasowo.dcmchat.utils.Colorize.EmbedColors.LEAVE;
+import xyz.zielinus.dcmchat.Dcmchat;
+import xyz.zielinus.dcmchat.utils.EmbedUtil;
+import xyz.zielinus.dcmchat.utils.PlayerUtil;
+import xyz.zielinus.dcmchat.utils.Colorize;
 
 public class PlayerConnectionListener implements Listener {
 
@@ -30,7 +28,7 @@ public class PlayerConnectionListener implements Listener {
         String username = event.getPlayer().getName();
 
         channel.sendMessageEmbeds(EmbedUtil.sendEmbedWithAuthor(String.format(JOIN_MESSAGE, username),
-                PlayerUtil.getAvatarByUsername(username), JOIN).build()).queue();
+                PlayerUtil.getAvatarByUsername(username), Colorize.EmbedColors.JOIN).build()).queue();
     }
 
     @EventHandler
@@ -40,7 +38,7 @@ public class PlayerConnectionListener implements Listener {
         String username = event.getPlayer().getName();
 
         channel.sendMessageEmbeds(EmbedUtil.sendEmbedWithAuthor(String.format(LEAVE_MESSAGE, username),
-                PlayerUtil.getAvatarByUsername(username), LEAVE).build()).queue();
+                PlayerUtil.getAvatarByUsername(username), Colorize.EmbedColors.LEAVE).build()).queue();
     }
 
 }

@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.commands;
+package xyz.zielinus.dcmchat.commands;
 
 import net.dv8tion.jda.api.entities.channel.Channel;
 import net.dv8tion.jda.api.entities.channel.ChannelType;
@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tk.siurasowo.dcmchat.Dcmchat;
+import xyz.zielinus.dcmchat.Dcmchat;
 
 import java.util.ArrayList;
 import java.util.Arrays;

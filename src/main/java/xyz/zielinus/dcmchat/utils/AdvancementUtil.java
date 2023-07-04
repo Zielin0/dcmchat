@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.utils;
+package xyz.zielinus.dcmchat.utils;
 
 import lombok.SneakyThrows;
 import org.json.simple.JSONObject;

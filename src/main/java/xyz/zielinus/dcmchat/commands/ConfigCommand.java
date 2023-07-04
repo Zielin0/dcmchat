@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.commands;
+package xyz.zielinus.dcmchat.commands;
 
 import lombok.SneakyThrows;
 import net.dv8tion.jda.api.entities.channel.Channel;
@@ -7,8 +7,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import tk.siurasowo.dcmchat.Dcmchat;
-import tk.siurasowo.dcmchat.utils.Colorize;
+import xyz.zielinus.dcmchat.Dcmchat;
+import xyz.zielinus.dcmchat.utils.Colorize;
 
 import java.util.ArrayList;
 import java.util.Arrays;

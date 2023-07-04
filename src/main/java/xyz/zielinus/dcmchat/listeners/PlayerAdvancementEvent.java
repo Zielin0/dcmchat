@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.listeners;
+package xyz.zielinus.dcmchat.listeners;
 
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import org.bukkit.advancement.Advancement;
@@ -6,11 +6,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 import org.jetbrains.annotations.NotNull;
-import tk.siurasowo.dcmchat.Dcmchat;
-import tk.siurasowo.dcmchat.utils.AdvancementUtil;
-import tk.siurasowo.dcmchat.utils.Colorize;
-import tk.siurasowo.dcmchat.utils.EmbedUtil;
-import tk.siurasowo.dcmchat.utils.PlayerUtil;
+import xyz.zielinus.dcmchat.Dcmchat;
+import xyz.zielinus.dcmchat.utils.AdvancementUtil;
+import xyz.zielinus.dcmchat.utils.Colorize;
+import xyz.zielinus.dcmchat.utils.EmbedUtil;
+import xyz.zielinus.dcmchat.utils.PlayerUtil;
 
 public class PlayerAdvancementEvent implements Listener {
 

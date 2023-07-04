@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.utils;
+package xyz.zielinus.dcmchat.utils;
 
 import org.bukkit.ChatColor;
 

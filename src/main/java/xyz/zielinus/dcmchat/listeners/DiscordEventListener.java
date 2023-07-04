@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.listeners;
+package xyz.zielinus.dcmchat.listeners;
 
 import com.vdurmont.emoji.EmojiParser;
 import net.dv8tion.jda.api.entities.Guild;
@@ -11,17 +11,13 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import tk.siurasowo.dcmchat.Dcmchat;
-import tk.siurasowo.dcmchat.utils.ChatUtils;
-import tk.siurasowo.dcmchat.utils.Colorize;
-import tk.siurasowo.dcmchat.utils.Hex;
+import xyz.zielinus.dcmchat.Dcmchat;
+import xyz.zielinus.dcmchat.utils.ChatUtils;
+import xyz.zielinus.dcmchat.utils.Colorize;
+import xyz.zielinus.dcmchat.utils.Hex;
 
 import java.awt.*;
 import java.util.List;
-
-import static tk.siurasowo.dcmchat.utils.Colorize.Colors.BLUE;
-import static tk.siurasowo.dcmchat.utils.Colorize.Colors.CYAN;
-import static tk.siurasowo.dcmchat.utils.Colorize.Colors.RED;
 
 public class DiscordEventListener extends ListenerAdapter {
 
@@ -38,7 +34,7 @@ public class DiscordEventListener extends ListenerAdapter {
 
         if (guilds.isEmpty()) {
             plugin.logger.info(Colorize.colorConsole("The bot hasn't been added to your server. " +
-                    "The bot will only work on the server you've setup in the config.yml file.", RED));
+                    "The bot will only work on the server you've setup in the config.yml file.", Colorize.Colors.RED));
         } else {
             plugin.setGuild(guilds.get(0));
         }
@@ -132,8 +128,8 @@ public class DiscordEventListener extends ListenerAdapter {
                     p.sendMessage(msg);
 
                     if (plugin.getIsConsoleEnabled()) {
-                        plugin.logger.info(Colorize.colorConsole("[Discord] ", BLUE)
-                                + Colorize.colorConsole(isWithTag, CYAN)
+                        plugin.logger.info(Colorize.colorConsole("[Discord] ", Colorize.Colors.BLUE)
+                                + Colorize.colorConsole(isWithTag, Colorize.Colors.CYAN)
                                 + Colorize.colorConsole(" " + message, Colorize.Colors.RESET)
                         );
                     }

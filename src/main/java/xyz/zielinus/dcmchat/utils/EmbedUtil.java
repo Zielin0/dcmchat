@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.utils;
+package xyz.zielinus.dcmchat.utils;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 

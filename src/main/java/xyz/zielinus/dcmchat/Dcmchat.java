@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat;
+package xyz.zielinus.dcmchat;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,17 +12,15 @@ import net.dv8tion.jda.api.utils.ChunkingFilter;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import tk.siurasowo.dcmchat.commands.ConfigCommand;
-import tk.siurasowo.dcmchat.commands.ConfigTabCompleter;
-import tk.siurasowo.dcmchat.commands.StatusCommand;
+import xyz.zielinus.dcmchat.commands.ConfigCommand;
+import xyz.zielinus.dcmchat.commands.ConfigTabCompleter;
+import xyz.zielinus.dcmchat.commands.StatusCommand;
 import tk.siurasowo.dcmchat.listeners.*;
-import tk.siurasowo.dcmchat.utils.Colorize;
+import xyz.zielinus.dcmchat.utils.Colorize;
+import xyz.zielinus.dcmchat.listeners.*;
 
 import java.util.*;
 import java.util.logging.Logger;
-
-import static tk.siurasowo.dcmchat.utils.Colorize.Colors.RED;
-import static tk.siurasowo.dcmchat.utils.Colorize.Colors.GREEN;
 
 public final class Dcmchat extends JavaPlugin {
     public Logger logger = this.getLogger();
@@ -46,14 +44,14 @@ public final class Dcmchat extends JavaPlugin {
     @SneakyThrows
     @Override
     public void onEnable() {
-        logger.info(Colorize.colorConsole(PLUGIN_NAME + " enabled!", GREEN));
+        logger.info(Colorize.colorConsole(PLUGIN_NAME + " enabled!", Colorize.Colors.GREEN));
 
         this.saveDefaultConfig();
         saveResource("advancements.json", true);
 
         String token = getConfig().getString("BOT_TOKEN");
         if (token == null) {
-            logger.info(Colorize.colorConsole("Please provide a BOT_TOKEN in the config.yml file.", RED));
+            logger.info(Colorize.colorConsole("Please provide a BOT_TOKEN in the config.yml file.", Colorize.Colors.RED));
             getServer().getPluginManager().disablePlugin(this);
         }
 
@@ -74,7 +72,7 @@ public final class Dcmchat extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        logger.info(Colorize.colorConsole(PLUGIN_NAME + " disabled!", RED));
+        logger.info(Colorize.colorConsole(PLUGIN_NAME + " disabled!", Colorize.Colors.RED));
 
         if (this.bot != null)
             this.bot.shutdown();

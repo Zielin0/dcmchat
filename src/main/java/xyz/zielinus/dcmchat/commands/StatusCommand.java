@@ -1,12 +1,13 @@
-package tk.siurasowo.dcmchat.commands;
+package xyz.zielinus.dcmchat.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import tk.siurasowo.dcmchat.Dcmchat;
-import tk.siurasowo.dcmchat.utils.Colorize;
+import xyz.zielinus.dcmchat.Dcmchat;
+import xyz.zielinus.dcmchat.utils.Colorize;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class StatusCommand implements CommandExecutor {

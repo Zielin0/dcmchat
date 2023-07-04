@@ -1,4 +1,4 @@
-package tk.siurasowo.dcmchat.listeners;
+package xyz.zielinus.dcmchat.listeners;
 
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import org.bukkit.entity.Player;
@@ -6,11 +6,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.jetbrains.annotations.NotNull;
-import tk.siurasowo.dcmchat.Dcmchat;
-import tk.siurasowo.dcmchat.utils.EmbedUtil;
-import tk.siurasowo.dcmchat.utils.PlayerUtil;
-
-import static tk.siurasowo.dcmchat.utils.Colorize.EmbedColors.DEFAULT;
+import xyz.zielinus.dcmchat.Dcmchat;
+import xyz.zielinus.dcmchat.utils.EmbedUtil;
+import xyz.zielinus.dcmchat.utils.PlayerUtil;
+import xyz.zielinus.dcmchat.utils.Colorize;
 
 public class PlayerChatEvent implements Listener {
 
@@ -28,7 +27,7 @@ public class PlayerChatEvent implements Listener {
 
         String message = event.getMessage();
 
-        channel.sendMessageEmbeds(EmbedUtil.sendEmbedWithAuthor(username, PlayerUtil.getAvatarByUsername(username), message, DEFAULT).build()).queue();
+        channel.sendMessageEmbeds(EmbedUtil.sendEmbedWithAuthor(username, PlayerUtil.getAvatarByUsername(username), message, Colorize.EmbedColors.DEFAULT).build()).queue();
     }
 
 }
