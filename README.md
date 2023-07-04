@@ -51,7 +51,7 @@ The project was done purely for learning and fun purposes. Do not take this plug
 
 ## Installation
 
-You need a 1.19.2 [papermc server](https://papermc.io/downloads).
+You need a 1.20.1 [papermc server](https://papermc.io/downloads).
 
 When the server is installed place the freshly downloaded plugin in the `plugins/` folder.
 
@@ -67,7 +67,7 @@ You need a discord bot for this.
 
 2. Copy the bot token to your clipboard.
 
-3. Go to `plugins/Dcmchat/` and open the `config.yml` file with a text editor.
+3. Go to `plugins/dcmchat/` and open the `config.yml` file with a text editor.
 
 4. Replace `"server"` with your server name (the server with the bot).
 
