@@ -15,7 +15,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import xyz.zielinus.dcmchat.commands.ConfigCommand;
 import xyz.zielinus.dcmchat.commands.ConfigTabCompleter;
 import xyz.zielinus.dcmchat.commands.StatusCommand;
-import tk.siurasowo.dcmchat.listeners.*;
 import xyz.zielinus.dcmchat.utils.Colorize;
 import xyz.zielinus.dcmchat.listeners.*;
 

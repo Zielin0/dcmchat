@@ -1,6 +1,6 @@
 name: Dcmchat
 version: '${project.version}'
-main: tk.siurasowo.dcmchat.Dcmchat
+main: xyz.zielinus.dcmchat.Dcmchat
 api-version: 1.19
 authors: [ Zielino ]
 description: Discord-Minecraft Chat Integration
