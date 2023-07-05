@@ -4,7 +4,7 @@ main: xyz.zielinus.dcmchat.Dcmchat
 api-version: 1.19
 authors: [ Zielino ]
 description: Discord-Minecraft Chat Integration
-website: https://siurasowo.tk
+website: https://zielinus.xyz
 
 commands:
   status:
