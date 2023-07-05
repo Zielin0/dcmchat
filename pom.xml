@@ -6,7 +6,7 @@
 
     <groupId>xyz.zielinus</groupId>
     <artifactId>dcmchat</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>dcmchat</name>
@@ -91,6 +91,11 @@
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
             <version>5.0.0-beta.12</version>
+        </dependency>
+        <dependency>
+            <groupId>club.minnced</groupId>
+            <artifactId>discord-webhooks</artifactId>
+            <version>0.8.2</version>
         </dependency>
         <dependency>
             <groupId>com.vdurmont</groupId>
